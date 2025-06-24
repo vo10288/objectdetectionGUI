@@ -46,3 +46,52 @@ Run from CLI:
 
 ```bash
 python3 object_detection_video_write_video.py -v inputvideo.avi -o outputvideo.avi
+
+
+pip install -r requirements.txt
+
+
+#!/bin/bash
+echo "[*] Installing Python dependencies..."
+pip install imutils opencv-python numpy face_recognition openalpr tk
+
+echo "[*] Installing system dependencies (Debian-based)..."
+sudo apt update
+sudo apt install -y openalpr libopenalpr-dev
+
+echo "[*] Done!"
+chmod +x setup.sh
+./setup.sh
+
+03.reports/
+├── CARS/
+├── PERSONS/
+├── DOGS/
+├── ALL/
+└── *.csv  ← License plate results
+🧑‍💻 Author
+
+Antonio 'Visi@n' Broi
+📧 antonio@tsurugi-linux.org
+🌍 https://tsurugi-linux.org
+🧾 License
+
+This software is licensed under the MIT License.
+
+Credits:
+
+    Adam Geitgey – face_recognition
+
+    MobileNetSSD – Caffe model for object detection
+
+    OpenALPR – Automatic License Plate Recognition
+
+💡 Notes
+
+    Tested on Linux (Ubuntu/Debian) with Python 3.9+
+
+    For real-time performance, a GPU is recommended
+
+    Ensure that the model files are present in /opt/computer_vision/
+
+
