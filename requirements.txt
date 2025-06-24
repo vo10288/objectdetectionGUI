@@ -1,0 +1,12 @@
+
+---
+
+### 📦 `requirements.txt`
+
+```txt
+tk
+face_recognition
+opencv-python
+openalpr
+imutils
+numpy
